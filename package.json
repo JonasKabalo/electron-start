@@ -1,0 +1,59 @@
+{
+  "name": "admin-electron-beta",
+  "productName": "admin-electron-beta",
+  "version": "1.0.0",
+  "description": "My Electron application description",
+  "main": "./.webpack/main",
+  "scripts": {
+    "start": "electron-forge start",
+    "package": "electron-forge package",
+    "make": "electron-forge make",
+    "publish": "electron-forge publish",
+    "lint": "echo \"No linting configured\""
+  },
+  "keywords": [],
+  "author": {
+    "name": "Jonas26",
+    "email": "kabalojonas44@gmail.com"
+  },
+  "license": "MIT",
+  "config": {
+    "forge": "./forge.config.js"
+  },
+  "dependencies": {
+    "bootstrap-vue": "^2.15.0",
+    "electron-is-dev": "^1.2.0",
+    "electron-squirrel-startup": "^1.0.0",
+    "vue": "^2.6.11",
+    "vue-html-loader": "^1.2.4"
+  },
+  "devDependencies": {
+    "@electron-forge/cli": "6.0.0-beta.51",
+    "@electron-forge/maker-deb": "6.0.0-beta.51",
+    "@electron-forge/maker-rpm": "6.0.0-beta.51",
+    "@electron-forge/maker-squirrel": "6.0.0-beta.51",
+    "@electron-forge/maker-zip": "6.0.0-beta.51",
+    "@electron-forge/plugin-webpack": "^6.0.0-beta.51",
+    "@marshallofsound/webpack-asset-relocator-loader": "^0.5.0",
+    "css-loader": "^3.5.3",
+    "ejs": "^3.1.3",
+    "ejs-html-loader": "^4.0.1",
+    "electron": "^9.0.2",
+    "electron-devtools-installer": "^3.0.0",
+    "electron-webpack": "^2.8.2",
+    "less": "^3.11.2",
+    "less-loader": "^6.1.0",
+    "node-loader": "^0.6.0",
+    "node-sass": "^4.14.1",
+    "nunjucks": "^3.2.1",
+    "nunjucks-loader": "^3.0.0",
+    "sass-loader": "^8.0.2",
+    "stylus-loader": "^3.0.2",
+    "url-loader": "^4.1.0",
+    "vue-loader": "^15.9.2",
+    "vue-style-loader": "^4.1.2",
+    "vue-template-compiler": "^2.6.11",
+    "webpack": "^4.43.0",
+    "webpack-node-externals": "^1.7.2"
+  }
+}
