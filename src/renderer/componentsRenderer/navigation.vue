@@ -8,10 +8,6 @@
       <b-navbar-nav>
         <b-nav-item to="/">DashBoard</b-nav-item>
         <b-nav-item to="/Invoices">Invoices</b-nav-item>
-        <b-nav-item href="#">Home</b-nav-item>
-        <b-nav-item href="#">Home</b-nav-item>
-        <b-nav-item href="#">Home</b-nav-item>
-        <b-nav-item href="#">Home</b-nav-item>
       </b-navbar-nav>
     </b-navbar>
   </div>
