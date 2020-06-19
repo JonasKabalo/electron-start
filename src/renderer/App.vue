@@ -1,6 +1,5 @@
 <template>
   <div id="app">
-    <h1>HELLO WORD</h1>
     <navigation />
   </div>
 </template>
