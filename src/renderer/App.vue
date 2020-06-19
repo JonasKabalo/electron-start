@@ -10,12 +10,12 @@
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap-vue/dist/bootstrap-vue.css';
 
-import navigation from './componentsRenderer/navigation';
+import Navigation from './componentsRenderer/Navigation';
 
 export default {
   name: 'PlatformAdmin',
   components: {
-    navigation,
+    Navigation,
   },
   data: () => ({
   }),
