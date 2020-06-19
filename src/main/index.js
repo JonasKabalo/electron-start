@@ -2,29 +2,42 @@ const {
   app,
   BrowserWindow,
 } = require('electron');
-import { resolve } from 'path';
+// import { resolve } from 'path';
+import logger from './logger';
+import createMainWindow from './windows/index';
+import isDev from 'electron-is-dev';
 
 if (require('electron-squirrel-startup')) {
   app.quit();
 }
+let windowManager;
 
-const MAIN_URL = process.env.NODE_ENV === 'development' ?
-  // eslint-disable-next-line no-undef
-  MAIN_WINDOW_WEBPACK_ENTRY : `file:/${resolve(__dirname, './renderer/index.html')}`;
-
-const createWindow = () => {
-  const mainWindow = new BrowserWindow({
-    webPreferences: {
-      nodeIntegration: true,
-    },
-  });
-
-  mainWindow.maximize();
-  mainWindow.loadURL(MAIN_URL);
-  mainWindow.webContents.openDevTools();
+const installDevtools = async () => {
+  const {
+    default: installExtension,
+    VUEJS_DEVTOOLS,
+  } = await import('electron-devtools-installer');
+  Promise.all([
+      installExtension(VUEJS_DEVTOOLS),
+    ])
+    .then(() => {
+      logger.info('Devtools installed.');
+    })
+    .catch((error) => {
+      logger.warn('Unable to install \'vue-devtools\': \n');
+      logger.error(error);
+    });
 };
 
-app.on('ready', createWindow)
+app.on('ready', () => {
+  logger.info('App ready. Beginning session and window management...');
+  createMainWindow();
+
+  if (isDev && process.env.BABEL_ENV !== 'test') {
+    logger.info('Installing Vue.js Devtools...');
+    installDevtools();
+  }
+});
 
 // Quit when all windows are closed.
 app.on('window-all-closed', () => {
@@ -36,10 +49,8 @@ app.on('window-all-closed', () => {
 });
 
 app.on('activate', () => {
-  // On OS X it's common to re-create a window in the app when the
-  // dock icon is clicked and there are no other windows open.
   if (BrowserWindow.getAllWindows().length === 0) {
-    createWindow;
+    windowManager.openMainWindow();
   }
 });
 
