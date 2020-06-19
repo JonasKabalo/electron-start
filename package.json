@@ -16,6 +16,7 @@
     "name": "Jonas26",
     "email": "kabalojonas44@gmail.com"
   },
+  "license": "JoSkynet",
   "config": {
     "forge": "./forge.config.js"
   },
