@@ -1,7 +1,9 @@
 <template>
   <div id="app">
     <navigation />
-    <router-view />
+    <div class="router-view">
+      <router-view />
+    </div>
   </div>
 </template>
 <script>
@@ -23,4 +25,8 @@ export default {
 </script>
 
 <style>
+.router-view {
+  margin: 5px 5px;
+  margin-left: 200px;
+}
 </style>

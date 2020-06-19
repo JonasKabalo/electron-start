@@ -7,8 +7,8 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'main-page',
-      component: require('@/renderer/pages/Home').default,
+      name: 'DashBoard',
+      component: require('@/renderer/pages/DashBoard').default,
     },
     {
       path: '/Invoices',
