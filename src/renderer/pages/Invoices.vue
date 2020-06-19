@@ -1,13 +1,15 @@
 <template>
-  <div class="container-dashBoard">
-    <h1>DashBoard</h1>
+  <div>
+    <h1>Invoices</h1>
   </div>
 </template>
 
 <script>
 export default {
-};
+
+}
 </script>
 
 <style>
+
 </style>

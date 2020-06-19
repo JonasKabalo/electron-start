@@ -1,19 +1,21 @@
 <template>
   <div id="app">
-    <h1>HELLO WORD</h1>
     <navigation />
+    <div class="router-view">
+      <router-view />
+    </div>
   </div>
 </template>
 <script>
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap-vue/dist/bootstrap-vue.css';
 
-import navigation from './componentsRenderer/navigation';
+import Navigation from './componentsRenderer/Navigation';
 
 export default {
   name: 'PlatformAdmin',
   components: {
-    navigation,
+    Navigation,
   },
   data: () => ({
   }),
@@ -21,5 +23,10 @@ export default {
   },
 };
 </script>
+
 <style>
+.router-view {
+  margin: 5px 5px;
+  margin-left: 200px;
+}
 </style>

@@ -40,6 +40,9 @@ module.exports = {
             js: path.resolve(__dirname, './src/renderer/index.js'),
             html: path.resolve(__dirname, './src/renderer/index.html'),
             name: 'main_window',
+            preload: {
+              js: path.resolve(__dirname, './src/renderer/preload.js'),
+            },
           },
         ],
       },

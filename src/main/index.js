@@ -4,19 +4,18 @@ const {
 } = require('electron');
 import { resolve } from 'path';
 
-if (require('electron-squirrel-startup')) { // eslint-disable-line global-require
+if (require('electron-squirrel-startup')) {
   app.quit();
 }
 
 const MAIN_URL = process.env.NODE_ENV === 'development' ?
-  MAIN_WINDOW_WEBPACK_ENTRY :
-  `file:/${resolve(__dirname, './renderer/index.html')}`;
+  // eslint-disable-next-line no-undef
+  MAIN_WINDOW_WEBPACK_ENTRY : `file:/${resolve(__dirname, './renderer/index.html')}`;
 
 const createWindow = () => {
   const mainWindow = new BrowserWindow({
     webPreferences: {
       nodeIntegration: true,
-      preload: MAIN_WINDOW_PRELOAD_WEBPACK_ENTRY,
     },
   });
 
