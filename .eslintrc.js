@@ -19,7 +19,7 @@ module.exports = {
     'plugin:vue/recommended'
   ],
   globals: {
-    __static: true,
+    __static: true
   },
   rules: {
     'global-require': 0,
@@ -33,7 +33,8 @@ module.exports = {
     'no-debugger': process.env.NODE_ENV === 'production' ? 2 : 0,
     'vue/component-name-in-template-casing': ['warn', 'kebab-case'],
     'import/no-extraneous-dependencies': ['error', {
-      devDependencies: ['**/*.test.js', 'src/**/*.js']
+      devDependencies: ['**/*.test.js', 'src/**/*.js'],
+      packageDir: './some-dir/'
     }]
-  }
+  },
 };

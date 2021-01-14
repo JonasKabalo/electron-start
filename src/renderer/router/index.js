@@ -11,11 +11,6 @@ export default new Router({
       component: require('@/renderer/pages/DashBoard').default,
     },
     {
-      path: '/Invoices',
-      name: 'Invoices',
-      component: require('@/renderer/pages/Invoices').default,
-    },
-    {
       path: '*',
       redirect: '/',
     },

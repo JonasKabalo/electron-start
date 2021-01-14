@@ -1,0 +1,16 @@
+.DS_Store
+/dist/
+/out/
+coverage
+node_modules/
+npm-debug.log
+npm-debug.log.*
+thumbs.db
+!.gitkeep
+platform-admin-*.tgz
+.webpack
+.nyc_output
+.env
+combined.log
+error.log
+yarn-eror.log
