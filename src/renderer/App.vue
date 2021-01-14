@@ -23,10 +23,3 @@ export default {
   },
 };
 </script>
-
-<style>
-.router-view {
-  margin: 5px 5px;
-  margin-left: 200px;
-}
-</style>

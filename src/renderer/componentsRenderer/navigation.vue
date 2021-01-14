@@ -3,7 +3,6 @@
     <b-navbar
       type="dark"
       variant="dark"
-      class="navBar"
     >
       <b-navbar-nav>
         <b-nav-item to="/">DashBoard</b-nav-item>
@@ -16,15 +15,3 @@
 export default {
 };
 </script>
-
-<style lang="scss">
-.navBar {
-  width: 15%;
-  position: fixed;
-  height: 110vh;
-  display: block;
-  ul {
-    flex-direction: column !important;
-  }
-}
-</style>
